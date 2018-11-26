@@ -55,7 +55,7 @@
 
             arc.append("path")
                .attr("d", path)
-               .attr("fill", function(d) { return color(d.data.browser); });
+               .attr("fill", function(d) { return color(d.data.party); });
         
             console.log(arc)
         
@@ -63,13 +63,13 @@
                .attr("transform", function(d) { 
                         return "translate(" + label.centroid(d) + ")"; 
                 })
-               .text(function(d) { return d.data.browser; });
+               .text(function(d) { return d.data.party; });
             });
 
             svg.append("g")
                .attr("transform", "translate(" + (width / 2 - 120) + "," + 20 + ")")
                .append("text")
-               .text("Browser use statistics - Jan 2017")
+               .text("台北市中山區政黨政治獻金收入比例")
                .attr("class", "title")
     </script>
 </body>
